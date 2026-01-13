@@ -1,0 +1,42 @@
+.menu-link {
+    color: gray;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.menu-link.active-menu {
+    color: #ff8c00;
+    font-size: 2.2rem;
+}
+
+.text-orange {
+    color: #ff8c00;
+}
+.text-secondary {
+    color: gray;
+}
+
+.tag-container {
+    display: grid;
+    grid-template-columns: repeat(4, max-content); /* 한 줄에 3개, 글자 폭만큼만 */
+    gap: 10px;
+}
+
+.tag-link {
+    text-decoration: none;
+    color: gray;
+    font-size: 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tag-link.selected {
+    color: orange;
+    font-weight: bold;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.springbootstudy.app.mapper.PostMapper" >
+ 
+	<select id="postList" resultType="Post">
+		SELECT 
+			* 
+		FROM post 
+		ORDER BY post_id DESC
+	</select>
+	
+	<select id="postListByTag" parameterType="int" resultType="Post">
+    	SELECT 
+    		* 
+    	FROM post
+    	WHERE category_id = #{tag} ORDER BY wdate DESC
+	</select>
+	
+	<select id="categoryList" resultType="Category">
+	    SELECT 
+	        category_id AS categoryId, type, cname, region, theme
+	    FROM category
+	</select>
+</mapper>
