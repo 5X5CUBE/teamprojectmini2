@@ -14,5 +14,9 @@ public class UesrsController {
     public String myPage() {
         return "views/mypageForm"; 
     }
+	@GetMapping("/mypost")
+    public String myPost() {
+        return "views/mypostForm"; 
+    }
  
 }
