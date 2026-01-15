@@ -18,5 +18,9 @@ public class UesrsController {
     public String myPost() {
         return "views/mypostForm"; 
     }
+	@GetMapping("/login")
+    public String loginPage() {
+        return "views/loginForm"; 
+    }
  
 }
