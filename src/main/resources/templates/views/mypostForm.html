@@ -4,9 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- 부트스트랩 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- 부트스트랩 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <style>
     /* 기본 스타일 유지 */
@@ -90,7 +88,7 @@
                 <!-- 글 유형 알려주는 곳 -> 현재 검색 결과 개수 표시로 변경 -->
                 <div class="fw-bold text-secondary">
                     <span>전체 게시글</span> 
-                    <span class="text-primary">15</span>건
+                    <span class="text-primary">x</span>건
                 </div>
 
                 <!-- 정렬 옵션 (오른쪽 정렬) -->
@@ -114,11 +112,10 @@
                     <thead class="table-light">
                         <tr>
                             <th style="width: 8%;">NO</th>
-                            <th style="width: 10%;">유형</th>
-                            <th style="width: 50%;">제목</th>
-                            <th style="width: 12%;">작성자</th>
-                            <th style="width: 12%;">작성일</th>
-                            <th style="width: 8%;">조회</th>
+                            <th style="width: 56%;">제목</th>
+                            <th style="width: 14%;">작성일</th>
+                            <th style="width: 10%;">추천수</th>
+                            <th style="width: 10%;">조회</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -129,7 +126,7 @@
 
             <!-- 검색 결과가 없을 때 (숨김 처리 예시) -->
             <!-- th:unless="${!#lists.isEmpty(postList)}" -->
-            <div class="text-center p-5 bg-light rounded mt-3" style="display: none;"> 
+            <div class="text-center p-5 bg-light rounded mt-3" > 
                 <p class="text-muted mb-0">검색 결과가 없습니다.</p>
             </div>
 

@@ -202,10 +202,30 @@
 	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      </div>
 	      <div class="modal-body">
-	      	<div class="input-group">
-			    <input type="text" class="form-control" placeholder="010-0000-0000">
-			    <button type="button" class="btn btn-secondary">인증 번호</button>
-			</div>
+	      	 <div class="mb-3">
+                 <div class="row g-2 align-items-center">
+                     <div class="col-3">
+                         <select class="form-select text-center" name="mobile1" id="mobile1">
+                             <option>010</option>
+                             <option>011</option>
+                             <option>016</option>
+                             <option>017</option>
+                         </select>
+                     </div>
+                     <div class="col-auto">
+                         <span class="fw-bold">-</span>
+                     </div>
+                     <div class="col">
+                         <input type="text" class="form-control text-center" name="mobile2" maxlength="4">
+                     </div>
+                     <div class="col-auto">
+                         <span class="fw-bold">-</span>
+                     </div>
+                     <div class="col">
+                         <input type="text" class="form-control text-center" name="mobile3" maxlength="4">
+                     </div>
+                 </div>
+               </div>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">수정 확인</button>
