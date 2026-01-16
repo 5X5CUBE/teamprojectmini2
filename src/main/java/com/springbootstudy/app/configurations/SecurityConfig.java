@@ -22,7 +22,8 @@ public class SecurityConfig {
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		
 		http.authorizeHttpRequests(auth -> 
-				auth.requestMatchers("/**").permitAll());
+				auth.requestMatchers("/", "/userjoin", "/login").permitAll()
+				.anyRequest().authenticated());
 		
 		http.csrf(csrf -> 
 				csrf.ignoringRequestMatchers("/h2-console/**"));
@@ -30,7 +31,7 @@ public class SecurityConfig {
 		http.csrf(csrf -> csrf.disable());
 		
 		http.logout(logout -> logout
-				.logoutSuccessUrl("/loginForm")
+				.logoutSuccessUrl("/login")
 				.invalidateHttpSession(true));
 		
 		return http.build();
